@@ -16,8 +16,7 @@ void print_usage(){
     fprintf(stderr, "SYNTAX ERROR:\nUsage: [old filename] [new filename]\n");
     exit(EXIT_FAILURE);
 }
-           
-           
+                     
 int main(int argc, char *argv[])
 {
 
@@ -56,4 +55,3 @@ int main(int argc, char *argv[])
     
     return 0;
 }
-
