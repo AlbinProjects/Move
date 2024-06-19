@@ -1,4 +1,4 @@
-
+// Program to move a file to other location
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,16 +33,11 @@ int main(int argc, char *argv[])
     // Other systems
     #else
         printf("Unidentified OS, please try in Linux\n");
-        return 0;
-    #endif
-    
-    
-	char ch;
+        return 0;    
 
 	if(argc != 3){
 		print_usage(argv[0]);
-	}
-	
+	}	
 	int status = rename(argv[1], argv[2]); 
 	
 	// move error
@@ -50,7 +45,7 @@ int main(int argc, char *argv[])
     {
         print_error(argv[1], argv[2]);
     }
-    else if(status == 0) // success
+    else if(status == 0) // move success
     {
     fprintf(stderr, "Operation Success..");
     }
@@ -61,6 +56,4 @@ int main(int argc, char *argv[])
     
     return 0;
 }
-
-
 
